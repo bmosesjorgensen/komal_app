@@ -1,8 +1,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Warmly - Privacy-First Translation',
-  description: 'Real-time translation for cross-cultural couples and families',
+  title: 'Komal Translation - Soft, Sweet, Tempered',
+  description: 'Privacy-first translation app for cross-cultural love',
 }
 
 export default function RootLayout({ children }) {
