@@ -124,21 +124,9 @@ Text to translate: "${text}"`
     setInputText('');
     setIsTranslating(true);
 
-    const translation = await translateMessage(
-      inputText,
-      languagePair.from,
-      languagePair.to
-    );
-
-    setMessages(prev =>
-      prev.map(msg =>
-        msg.id === userMessage.id
-          ? { ...msg, translation, isTranslating: false }
-          : msg
-      )
-    );
-    setIsTranslating(false);
-  };
+  const translateMessage = async (text, fromLang, toLang) => {
+  try {
+    const response = await fetch('https://api.anthropic.com/v1/messages', {
 
   const handleKeyPress = (e) => {
     if (e.key === 'Enter' && !e.shiftKey) {
